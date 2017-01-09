@@ -30,8 +30,9 @@ angular.module('app.controllers', [])
         catch (e) {
           console.log(e);
         }
-        temp = JSON.parse(JSON.stringify(temp));
-        $scope.answer = temp.value + ' ' + temp.unit;
+
+        $scope.answer = temp.toString();
+        ;
       }
     }])
 
