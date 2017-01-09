@@ -25,7 +25,7 @@ angular.module('app.controllers', [])
       $scope.update = function() {
 
         try {
-          var temp = math.eval($scope.form.query);
+          var temp = math.eval($scope.form.query.toLowerCase());
         }
         catch (e) {
           console.log(e);
@@ -40,6 +40,23 @@ angular.module('app.controllers', [])
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
     function($scope, $stateParams) {
+
+      $scope.form = {meter: '', inch: '', mile: '', km: '', yard: '', foot: ''};
+
+      $scope.update = function(curVal, curUnit) {
+        try {
+          $scope.form.meter = parseFloat(math.eval(curVal + ' ' + curUnit + ' to meter').toString());
+          $scope.form.inch = parseFloat(math.eval(curVal + ' ' + curUnit + ' to inch').toString());
+          $scope.form.mile = parseFloat(math.eval(curVal + ' ' + curUnit + ' to mile').toString());
+          $scope.form.km = parseFloat(math.eval(curVal + ' ' + curUnit + ' to km').toString());
+          $scope.form.yard = parseFloat(math.eval(curVal + ' ' + curUnit + ' to yard').toString());
+          $scope.form.foot = parseFloat(math.eval(curVal + ' ' + curUnit + ' to foot').toString());
+        }
+        catch (e) {
+          console.log(e);
+        }
+        ;
+      }
 
 
     }])

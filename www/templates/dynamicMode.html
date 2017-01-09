@@ -3,32 +3,32 @@
     <form id="dynamicMode-form2" class="list">
       <label class="item item-input" id="dynamicMode-input3">
         <span class="input-label">Meter</span>
-        <input type="number" placeholder="">
+        <input ng-model="form.meter" ng-change="update(form.meter,'meter')" type="number" placeholder="">
       </label>
       <div class="spacer" style="width: 300px; height: 13px;"></div>
       <label class="item item-input" id="dynamicMode-input4">
         <span class="input-label">Inch </span>
-        <input type="number" placeholder="">
+        <input ng-model="form.inch" ng-change="update(form.inch,'inch')" type="number" placeholder="">
       </label>
       <div class="spacer" style="width: 300px; height: 13px;"></div>
       <label class="item item-input" id="dynamicMode-input5">
         <span class="input-label">Foot</span>
-        <input type="number" placeholder="">
+        <input ng-model="form.foot" ng-change="update(form.foot,'foot')" type="number" placeholder="">
       </label>
       <div class="spacer" style="width: 300px; height: 13px;"></div>
       <label class="item item-input" id="dynamicMode-input6">
         <span class="input-label">Mile</span>
-        <input type="number" placeholder="">
+        <input ng-model="form.mile" ng-change="update(form.mile,'mile')" type="number" placeholder="">
       </label>
       <div class="spacer" style="width: 300px; height: 13px;"></div>
       <label class="item item-input" id="dynamicMode-input7">
-        <span class="input-label">Inch</span>
-        <input type="number" placeholder="">
+        <span class="input-label">Yard</span>
+        <input ng-model="form.yard" ng-change="update(form.yard,'yard')" type="number" placeholder="">
       </label>
       <div class="spacer" style="width: 300px; height: 13px;"></div>
       <label class="item item-input" id="dynamicMode-input8">
         <span class="input-label">Kilo Meter</span>
-        <input type="number" placeholder="">
+        <input ng-model="form.km" ng-change="update(form.km,'km')" type="number" placeholder="">
       </label>
     </form>
   </ion-content>
