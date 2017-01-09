@@ -3,16 +3,24 @@
     <form id="plotCalculator-form6" class="list">
       <label class="item item-input" id="plotCalculator-input14">
         <span class="input-label">Width</span>
-        <input type="number" placeholder="in foot">
+        <input ng-model="form.width" type="number" placeholder="in foot">
       </label>
       <div class="spacer" style="width: 300px; height: 13px;"></div>
       <label class="item item-input" id="plotCalculator-input15">
         <span class="input-label">Length</span>
-        <input type="number" placeholder="in foot">
+        <input ng-model="form.length" type="number" placeholder="in foot">
       </label>
       <div class="spacer" style="width: 300px; height: 13px;"></div>
+      <button type="button" ng-click="update()">Evaluate</button>
+      <div class="spacer" style="width: 300px; height: 13px;"></div>
       <div id="plotCalculator-markdown2" class="show-list-numbers-and-dots">
-        <p style="color:#000000;">Some friendly</p>
+
+        Area in acres : {{acres}}
+        <br>
+        Area in Sq Meter : {{sqMeter}}
+        <br>
+        Area in Sq Foot : {{sqFoot}}
+
       </div>
     </form>
   </ion-content>

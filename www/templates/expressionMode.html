@@ -1,12 +1,15 @@
 <ion-view title="Expression  Mode" id="page4">
   <ion-content padding="true" class="has-header">
-    <h5 id="expressionMode-heading1" style="color:#000000;font-weight:400;">In this mode you are allowed to give an expression for evaluation, Ex: 10 meters to km will give you an output of .01 km </h5>
+    <h5 id="expressionMode-heading1" style="color:#000000;font-weight:400;">In this mode you are allowed to give an
+      expression for evaluation, Ex: 10 meters to km will give you an output of .01 km </h5>
     <form id="expressionMode-form1" class="list">
       <label class="item item-input" id="expressionMode-input1">
         <input ng-model="form.query" type="text" placeholder="Enter expression">
       </label>
     </form>
+    <div class="spacer" style="width: 300px; height: 13px;"></div>
     <button type="button" ng-click="update()">Evaluate</button>
+    <div class="spacer" style="width: 300px; height: 13px;"></div>
     <div id="ans">
       {{answer}}
     </div>

@@ -3,37 +3,25 @@
     <form id="unitMode-form3" class="list">
       <label class="item item-input" id="unitMode-input11">
         <span class="input-label">Input</span>
-        <input type="number" placeholder="">
+        <input ng-model="form.input" ng-change="update('0',0)" type="number" placeholder="">
       </label>
       <label class="item item-select" id="unitMode-select1" name="Lengths">
         <span class="input-label">Unit</span>
-        <select>
-          <option>Inch</option>
-          <option>Meter</option>
-          <option>Km</option>
-          <option>Yard</option>
-          <option>Foot</option>
-          <option>Mile</option>
+        <select ng-model="inputUnit" ng-change="update(inputUnit,1)" ng-options="x for x in options">
         </select>
       </label>
     </form>
-    <div class="spacer" style="width: 300px; height: 86px;"></div>
+    <div class="spacer" style="width: 300px; height: 25px;"></div>
     <form id="unitMode-form5" class="list">
-      <label class="item item-input" id="unitMode-input13">
-        <span class="input-label">Output</span>
-        <input type="number" placeholder="">
-      </label>
       <label class="item item-select" id="unitMode-select3" name="Lengths">
-        <span class="input-label">Unit</span>
-        <select>
-          <option>Inch</option>
-          <option>Meter</option>
-          <option>Km</option>
-          <option>Yard</option>
-          <option>Foot</option>
-          <option>Mile</option>
+        <span class="input-label">Output Unit</span>
+        <select ng-model="outputUnit" ng-change="update(outputUnit,2)" ng-options="x for x in options">
         </select>
       </label>
     </form>
+    <div class="spacer" style="width: 300px; height: 13px;"></div>
+    <div id="ans">
+      {{form.output}}
+    </div>
   </ion-content>
 </ion-view>
