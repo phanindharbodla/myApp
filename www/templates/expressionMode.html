@@ -4,7 +4,7 @@
       expression for evaluation, Ex: 10 meters to km will give you an output of .01 km </h5>
     <form id="expressionMode-form1" class="list">
       <label class="item item-input" id="expressionMode-input1">
-        <input ng-model="form.query" type="text" placeholder="Enter expression">
+        <input ng-model="form.query" ng-keyup="clearAns()" type="text" placeholder="Enter expression">
       </label>
     </form>
     <div class="spacer" style="width: 300px; height: 13px;"></div>

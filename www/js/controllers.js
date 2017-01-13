@@ -34,6 +34,9 @@ angular.module('app.controllers', [])
         $scope.answer = temp.toString();
         ;
       }
+      $scope.clearAns = function() {
+        $scope.answer = "";
+      }
     }])
 
   .controller('dynamicModeCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
